@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greenvitality Home Decor LLP - Pitch Deck</title>
+  <link rel="icon" type="image/x-icon" href="img/qqqqq-01.ico">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      transition: background 0.4s, color 0.4s;
+    }
+    h1, h2, h3 {
+      color: #2a5d2a;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    h2 {
+      border-bottom: 2px solid #a3c293;
+      padding-bottom: 5px;
+      margin-top: 50px;
+    }
+    .center {
+      text-align: center;
+    }
+    img.logo {
+      display: block;
+      margin: 10px auto 40px auto;
+      max-width: 180px;
+    }
+    img.product {
+      width: 100%;
+      max-width: 320px;
+      margin: 15px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      display: block;
+    }
+    .product-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    blockquote {
+      font-style: italic;
+      color: #666;
+      margin: 10px 20px;
+      padding-left: 15px;
+      border-left: 4px solid #a3c293;
+    }
+    ul {
+      list-style: disc inside;
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .product:hover{
+      scale: 1.1;
+    }
+    /* -- Stylish Toggle Switch Styles -- */
+    .switch {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index:1000;
+      display: inline-block;
+      width: 54px;
+      height: 28px;
+    }
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; right: 0; left: 0; bottom: 0;
+      background-color: #bbb;
+      transition: .4s;
+      border-radius: 28px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(50,50,50,0.09);
+    }
+    input:checked + .slider {
+      background-color: #444;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    /* Moon & Sun icon on switch */
+    .slider:after {
+      /* content: "🌙"; */
+      position: absolute;
+      right: 8px;
+      top: 4px;
+      font-size: 16px;
+      transition: content 0.4s;
+    }
+    input:checked + .slider:after {
+      /* content: "☀️"; */
+      left: 8px;
+      right: auto;
+    }
+    /* -- DARK MODE Styles -- */
+    body.dark-mode {
+      background: #191f23;
+      color: #ececec;
+      transition: background 0.4s, color 0.4s;
+    }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+      color: #baffbc;
+    }
+    body.dark-mode blockquote {
+      color: #b0c9b0;
+      border-left: 4px solid #638e63;
+    }
+    body.dark-mode .slider {
+      background-color: #333;
+    }
+    /* Centered logo container */
+    #logoCenterContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      position: relative;
+    }
+    /* Make sure both logos perfectly overlay and are centered */
+  .logo-stack {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-img {
+  display: block;
+  width: 220px;       /* set same size for both images */
+  height: 220px;      /* or use height: auto; if both images are perfectly square */
+  object-fit: contain; /* prevents distortion, "contain" keeps full image visible */
+  background: transparent;
+}
+
+#mainLogo {
+  position: relative;
+  z-index: 1;
+}
+
+#darkLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  pointer-events: none;
+  /* Ensures perfect overlay */
+}
+
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 1000;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+ /* .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  width: 52px;      
+  height: 28px;     
+  background-color: #bbb;
+  transition: background 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 6px;
+  top: 6px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(50,50,50,0.09);
+  z-index: 2;
+} 
+
+input:checked + .slider:before {
+  transform: translateX(24px); 
+} */
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 6px;
+  top: 6px;
+  background-color: #191919; /* Black by default */
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(50,50,50,0.09);
+  z-index: 2;
+}
+input:checked + .slider:before {
+  background-color: #fff;     /* Turns white when toggled */
+  transform: translateX(24px);
+}
+
+@keyframes logoPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(-15deg);
+    filter: blur(5px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) rotate(5deg);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+
+.logo-img {
+  opacity: 0;
+  transform: scale(0.6);
+  animation: logoPopIn 1.1s cubic-bezier(.23,1.22,.85,1) forwards;
+  
+}
+
+#darkLogo {
+
+  animation-delay: 0.15s;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Stylish Dark Mode Toggle Switch -->
+  <label class="switch" title="Toggle dark mode">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+
+  <h1>Greenvitality Home Decor LLP</h1>
+  <p class="center"><strong>Reviving Indian Ceramic Heritage for the World</strong></p>
+  
+ 
+
+  <div id="logoCenterContainer">
+  <div class="logo-stack">
+    <img src="img/GV_withoutTR-01.png" alt="Greenvitality Logo" id="mainLogo" class="logo-img">
+    <img src="img/dark.png" alt="Dark Mode Logo" id="darkLogo" class="logo-img">
+  </div>
+</div>
+
+
+  <h2>Vision &amp; Mission</h2>
+  <p><strong>Vision:</strong><br />
+    To celebrate and globalize the heritage of Indian ceramic craftsmanship by connecting skilled artisans and authentic products to contemporary consumers, both in India and worldwide.
+  </p>
+  <p><strong>Mission:</strong><br />
+    Empower craft communities, inspire modern living with timeless ceramics, and deliver value through innovation, branding, and technology.
+  </p>
+
+  <h2>The Problem</h2>
+  <ul>
+    <li>Traditional ceramic artisans face limited access to modern markets and fair compensation.</li>
+    <li>Consumers struggle to find authentic, high-quality handcrafted ceramics easily.</li>
+    <li>The rich legacy of Indian craftsmanship risks being overshadowed by mass-produced goods.</li>
+  </ul>
+
+  <h2>Our Solution</h2>
+  <p>
+    Curate and procure premium handcrafted ceramics directly from skilled artisans and craft centers. Brand and sell these exclusive products through our own online store and leading marketplaces like Amazon. Preserve craftsmanship through quality control, storytelling, and brand value.
+  </p>
+
+  <h2>Unique Value Proposition</h2>
+  <ul>
+    <li><strong>Authenticity:</strong> Each product reflects Indian heritage and is artisan-made.</li>
+    <li><strong>Branding:</strong> Contemporary branding and curated collections for the global market.</li>
+    <li><strong>Social Impact:</strong> Increased income and recognition for artisans; preservation of traditional crafts.</li>
+    <li><strong>Scalability:</strong> E-commerce and multi-channel sales enable rapid growth and global reach.</li>
+  </ul>
+
+  <h2>Market Opportunity</h2>
+  <ul>
+    <li>Home decor and ceramics is a multi-billion dollar and growing segment in India and abroad.</li>
+    <li>Rising demand for premium, artisanal, and unique home products.</li>
+    <li>Digital retail is transforming access to rural/artisan economies.</li>
+  </ul>
+
+  <h2>Business Model</h2>
+  <ul>
+    <li>Purchase curated products from artisans/craft centers at wholesale rates.</li>
+    <li>Retail products under Greenvitality’s brand via website and e-commerce platforms.</li>
+    <li>Revenue from retail margins, premium packaging, and value-added services (e.g., gifting, international shipping).</li>
+  </ul>
+
+  <h2>Go-to-Market Strategy</h2>
+  <ul>
+    <li>Launch on marketplaces (Amazon, Flipkart, etc.).</li>
+    <li>Build a branded e-commerce site for direct sales.</li>
+    <li>Leverage content, social media, and digital storytelling.</li>
+    <li>Partnerships with artisan clusters and craft councils.</li>
+  </ul>
+
+  <h2>Impact & Scalability</h2>
+  <ul>
+    <li>Increased artisan income.</li>
+    <li>Preservation of Indian heritage.</li>
+    <li>Creation of sustainable employment across the supply chain.</li>
+    <li>High potential to expand product portfolio and enter global markets.</li>
+  </ul>
+
+  <h2>Revenue Model</h2>
+  <p>
+    Greenvitality Home Decor LLP operates a high-margin retail business by strategically sourcing premium handcrafted ceramics and home decor products directly from skilled artisans and authentic craft hubs at competitive wholesale rates. We enhance product value through proprietary branding, curated collections, and premium packaging to create a differentiated market offering. Leveraging multi-channel distribution including our proprietary ecommerce platform and leading online marketplaces such as Amazon, we efficiently scale customer reach across domestic and international markets. This model maximizes revenue through healthy product margins and offers additional streams from value-added services like personalized curation and global shipping, positioning us for sustainable growth and strong investor returns.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:contact@greenvitality.com">contact@greenvitality.com</a></p>
+
+  <h2>Our Products</h2>
+  <div class="product-row">
+    <img src="yellowpottable.jpeg" alt="Bonsai pot in cream ceramic" class="product" />
+    <img src="download-5.jpeg" alt="Ceramic flower pot with white flowers" class="product" />
+    <img src="yellomattepot.jpg" alt="Yellow matte ceramic planter" class="product" />
+  </div>
+  <div class="product-row">
+    <img src="-NQEKg_NNi_92OSCLVIx.jpg" alt="Succulents in long rectangular white planter" class="product" />
+    <img src="-NQEQUFAK1APPUBL9pcN.jpg" alt="Succulents in rectangular white planter on beige surface" class="product" />
+    <img src="-NQEKg_1M6xYjYCIcwlQ.jpg" alt="Succulent plants in rectangular white ceramic planter" class="product" />
+    <img src="-NQEQUFeE2DErATJeVav.jpg" alt="Succulents in white ceramic planter with wooden tray" class="product" />
+  </div>
+  <div class="product-row">
+    <img src="download-10.jpg" alt="Blue ceramic geometric planter with cactus" class="product" />
+    <img src="bule-geo-with-flower.jpg" alt="Blue geometric ceramic planter with flowers" class="product" />
+    <img src="blue-geo.jpg" alt="Blue geometric planter close-up" class="product" />
+    <img src="blue-geometric-planter.jpg" alt="Blue geometric vase planter with clipping path" class="product" />
+  </div>
+  <div class="product-row">
+    <img src="logpotamazon.jpg" alt="Ceramic pot on Amazon listing" class="product" />
+    <img src="amazonlong.jpg" alt="Long ceramic pot on Amazon listing" class="product" />
+  </div>
+  <div class="product-row">
+    <img src="greek-face.jpg" alt="White greek face ceramic planter" class="product" />
+    <img src="greek-face-with-plants.jpg" alt="Greek face ceramic planter with plants" class="product" />
+    <img src="groot-with-flower-2.jpg" alt="Groot ceramic planter with flower" class="product" />
+  </div>
+  <div class="product-row">
+    <img src="-NQEKg_NNi_92OSCLVIx.jpg" alt="Succulents in long rectangular white planter repeat" class="product" />
+    <img src="-NQEQUFAK1APPUBL9pcN.jpg" alt="Succulents in rectangular white planter on beige surface repeat" class="product" />
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    const darkLogo = document.getElementById('darkLogo');
+    toggleButton.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        darkLogo.style.display = 'block';
+      } else {
+        darkLogo.style.display = 'none';
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>
